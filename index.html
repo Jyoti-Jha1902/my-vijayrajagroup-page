@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vijay Raja Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<!-- FavIcon -->
+<link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark home-navbar">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <!-- <i class="fa-solid fa-house me-2"></i> -->
+      <img src="./images/favicon-32x32.png" alt="">
+       Vijay Raja Group
+
+    </a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Properties</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Featured Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Subscribe Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">FOR SITE VISIT </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= BANNER ================= -->
+<section class="hero-banner">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+
+      <!-- LEFT IMAGE SPACE -->
+      <div class="col-lg-7"></div>
+
+      <!-- RIGHT FORM -->
+      <div class="col-lg-5">
+        <!-- <div class="banner-form">
+          <h3>Let Us Call You</h3>
+          <p>To help you find your property</p>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="Phone">
+            </div>
+          </div>
+
+          <input type="email" class="form-control mb-3" placeholder="Email">
+
+          <textarea class="form-control mb-3" rows="4"
+            placeholder="How is your desired property?"></textarea>
+
+          <button class="btn submit-btn w-100 mb-3">Submit</button>
+
+          <div class="form-check small-text">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">
+              I consent to having this website store my submitted information so they can respond to my inquiry.
+            </label>
+          </div>
+        </div> -->
+
+        <div class="banner-form">
+             <h3>Let Us Call You</h3>
+          <p>To help you find your property</p>
+
+             <!-- SALESFORCE WEB-TO-LEAD FORM -->
+    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DBh000001jgXB"
+          method="POST">
+
+        <input type="hidden" name="oid" value="00DBh000001jgXB">
+        <input type="hidden" name="retURL" value="http://">
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="first_name">First Name</label>
+                <input id="first_name" maxlength="40" name="first_name" class="form-control" type="text">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="last_name">Last Name</label>
+                <input id="last_name" maxlength="80" name="last_name" class="form-control" type="text">
+            </div>
+        </div>
+
+        <label for="phone">Phone</label>
+        <input id="phone" maxlength="40" name="phone" class="form-control mb-3" type="text">
+
+        <label for="email">Email</label>
+        <input id="email" maxlength="80" name="email" class="form-control mb-3" type="text">
+
+        <label for="description">Description</label>
+        <textarea name="description"  class="form-control mb-3"  placeholder="How is your desired property?"></textarea>
+
+        <input type="submit" name="submit" class="btn submit-btn w-100 mb-3" value="Submit">
+  <div class="form-check small-text">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">
+              I consent to having this website store my submitted information so they can respond to my inquiry.
+            </label>
+          </div>
+    </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROPERTY SLIDER ================= -->
+<section class="property-slider-section">
+  <div class="container">
+
+    <h2 class="section-title text-center">Best Properties For Sale</h2>
+    <div class="title-line"></div>
+
+    <div class="owl-carousel property-carousel">
+
+      <!-- CARD 1 -->
+      <div class="property-card">
+        <div class="item">
+  <div class="property-img">
+          <span class="badge-featured">FEATURED</span>
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+        </div>
+        <div class="property-body">
+          <div class="price-row">
+            <h5>$1,250,000</h5>
+            <span class="sale-tag">FOR SALE</span>
+          </div>
+          <h6>Residential apartments, Vijay Raja Group Apartments </h6>
+          <p>Behind Rajalakshmi Mahindra, Poonamallee, Chennai</p>
+        </div>
+        </div>
+      
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="property-card">
+        <div class="item">
+    <div class="property-img">
+          <span class="badge-featured">FEATURED</span>
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+        </div>
+        <div class="property-body">
+          <div class="price-row">
+            <h5>$1,250,000</h5>
+            <span class="sale-tag">FOR SALE</span>
+          </div>
+          <h6>1 & 2 BHK apartments in a gated community apartments</h6>
+          <p>Thiruporur Road, near Thiruporur, close to the OMR/ ECR growth corridor, Chennai</p>
+        </div>
+        </div>
+    
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="property-card">
+        <div class="item">
+      <div class="property-img">
+          <span class="badge-featured">FEATURED</span>
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914">
+        </div>
+        <div class="property-body">
+          <div class="price-row">
+            <h5>$1,250,000</h5>
+            <span class="sale-tag">FOR SALE</span>
+          </div>
+          <h6>1 & 2 BHK flats + studios in an integrated township.</h6>
+          <p>Jamin Korattur, IMA Puduchatram,Thirumazhisai, Chennai</p>
+        </div>
+        </div>
+  
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="property-card">
+        <div class="property-img">
+          <span class="badge-featured">FEATURED</span>
+          <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
+        </div>
+        <div class="property-body">
+          <div class="price-row">
+            <h5>$1,250,000</h5>
+            <span class="sale-tag">FOR SALE</span>
+          </div>
+          <h6>Studio, 1 BHK, 2 BHK sea-view apartments.</h6>
+          <p>S.Nos.40/2A, 46/1A2A, Muttukadu-Thiruporur, Chennai</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= why-choose-us ================= -->
+
+<section class="why-choose-us">
+  <div class="container">
+    <h2 class="section-title">Why Choose Us?</h2>
+    <span class="title-underline"></span>
+
+    <div class="features">
+      <!-- Feature 1 -->
+      <div class="feature-card">
+        <img src="./images/why-us_1.png" alt="Wider range of properties" />
+        <h3>Wider range of properties</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse
+          suscorrem ipsum dolor sit ametcipsum suscorein ipsumg elit.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card">
+        <img src="./images/why-us_2.png" alt="Financing made easy" />
+        <h3>Financing made easy</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse
+          suscorrem ipsum dolor sit ametcipsum suscorein ipsumg elit.
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card">
+        <img src="./images/why-us_3.png" alt="Transparency" />
+        <h3>Transparency</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse
+          suscorrem ipsum dolor sit ametcipsum suscorein ipsumg elit.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Featured Project ================= -->
+<section class="featured-section">
+  <div class="container">
+
+    <span class="section-tag">FEATURED PROPERTIES</span>
+    <h2 class="section-heading">Check Out Our Featured Items</h2>
+
+    <div class="owl-carousel featured-slider">
+
+      <!-- Slide 1 -->
+      <div class="item">
+        <div class="featured-card">
+
+          <div class="image-box">
+            <img src="./images/featured-1.jpg" alt="">
+            <div class="badges">
+              <span class="badge featured">FEATURED</span>
+              <span class="badge rent">FOR RENT</span>
+            </div>
+          </div>
+
+          <div class="content-box">
+            <h3>House In Foxhall Ave, Kingston</h3>
+            <span class="location">289 Foxhall Ave, Kingston</span>
+
+            <p class="description">
+              Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus
+              faucibus scelerisque eleifend donec. Porta nibh venenatis cras sed.
+            </p>
+
+            <div class="property-info">
+              <span>3 Br</span>
+              <span>2 Ba</span>
+              <span>900 SqFt</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="price-row">
+              <div class="price">$5500 <span>/ month</span></div>
+              <a href="#" class="view-btn">View Details</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="item">
+        <div class="featured-card">
+          <div class="image-box">
+            <img src="./images/featured-3.jpg" alt="">
+            <div class="badges">
+              <span class="badge featured">FEATURED</span>
+              <span class="badge rent">FOR RENT</span>
+            </div>
+          </div>
+          <div class="content-box">
+            <h3>Luxury Villa In Miami</h3>
+            <span class="location">Miami, Florida</span>
+            <p class="description">
+              Spacious villa with premium interiors and modern design.
+            </p>
+            <div class="property-info">
+              <span>4 Br</span>
+              <span>3 Ba</span>
+              <span>1200 SqFt</span>
+            </div>
+            <div class="divider"></div>
+            <div class="price-row">
+              <div class="price">$8500 <span>/ month</span></div>
+              <a href="#" class="view-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="item">
+        <div class="featured-card">
+          <div class="image-box">
+            <img src="./images/featured-2.jpg" alt="">
+            <div class="badges">
+              <span class="badge featured">FEATURED</span>
+              <span class="badge rent">FOR RENT</span>
+            </div>
+          </div>
+          <div class="content-box">
+            <h3>Modern Apartment In New York</h3>
+            <span class="location">Brooklyn, NY</span>
+            <p class="description">
+              Comfortable apartment located near city attractions.
+            </p>
+            <div class="property-info">
+              <span>2 Br</span>
+              <span>1 Ba</span>
+              <span>700 SqFt</span>
+            </div>
+            <div class="divider"></div>
+            <div class="price-row">
+              <div class="price">$6200 <span>/ month</span></div>
+              <a href="#" class="view-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="item">
+        <div class="featured-card">
+          <div class="image-box">
+            <img src="./images/featured-1.jpg" alt="">
+            <div class="badges">
+              <span class="badge featured">FEATURED</span>
+              <span class="badge rent">FOR RENT</span>
+            </div>
+          </div>
+          <div class="content-box">
+            <h3>Family Home In Los Angeles</h3>
+            <span class="location">Los Angeles, CA</span>
+            <p class="description">
+              Beautiful family home with spacious rooms and garden.
+            </p>
+            <div class="property-info">
+              <span>3 Br</span>
+              <span>2 Ba</span>
+              <span>1000 SqFt</span>
+            </div>
+            <div class="divider"></div>
+            <div class="price-row">
+              <div class="price">$7800 <span>/ month</span></div>
+              <a href="#" class="view-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= Newsletter ================= -->
+<section class="newsletter-section">
+  <div class="newsletter-overlay">
+    <div class="newsletter-content">
+      <h2>
+        Subscribe to newsletter to receive exclusive<br>
+        offers and the latest news
+      </h2>
+
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Footer ================= -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-col brand">
+      <div class="logo">
+        <img src="./images/favicon-32x32.png">
+        <span>Vijay Raja Group</span>
+      </div>
+      <p>Vijay Raja Homes Private Limited</p>
+      <p>50, Bharathi St, Vasudevan Nagar, Thirunagar, West Jafferkhanpet, Chennai, Tamil Nadu 600083, India</p>
+      <p>marketing@vijayrajagroup.com</p>
+      <p><strong>+91075500 62219</strong></p>
+      <!-- <p>www.homeid.com</p> -->
+    </div>
+
+    <div class="footer-col">
+      <h4>Location</h4>
+      <ul>
+        <li><a href="#">Poonamallee</a></li>
+        <li><a href="#">Thiruporur</a></li>
+        <li><a href="#">Thirumazhisai</a></li>
+        <li><a href="#">Muttukadu - ECR</a></li>
+         <li><a href="#">Chennai</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact Support</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col newsletter">
+      <h4>Sign Up for Our Newsletter</h4>
+      <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis.</p>
+
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="left">
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+    <div class="right">
+        <p>&copy; Copyright 2025 Vijayraja. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<!-- jQuery (MUST be first) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
