@@ -1,29 +1,59 @@
 body {
   font-family: "Segoe UI", sans-serif;
 }
-
+.site-header{
+  position: fixed;
+    /* height: 100px; */
+    left: 0;
+    top: 0;
+    z-index: 99;
+    /* float: left; */
+    width: 100%;
+    -webkit-transition: all 0.3s 
+ease-out;
+    transition: all 0.3s 
+ease-out;
+box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
 /* NAVBAR */
 .home-navbar {
   position: absolute;
   width: 100%;
   top: 0;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.35);
+  background: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* background: rgba(0, 0, 0, 0.35); */
 }
-
-.home-navbar .nav-link {
-  color: #fff;
-  margin-left: 20px;
+.home-navbar .nav-item {
+  /* color: #fff; */
+  color: #000;
+  margin-left: 10px;
   font-weight: 500;
 }
-
+.home-navbar .nav-link {
+  /* color: #fff; */
+  color: #000;
+  /* margin-left: 20px; */
+  font-weight: 500;
+  display: inline;
+}
+/* .home-navbar .phone {
+  margin: 0;
+  padding-left: 0 !important;
+} */
+.home-navbar .nav-link:hover {
+  color: #1ecbe1;
+  text-decoration: underline;
+}
 .home-navbar .nav-link.active {
   color: #1ecbe1;
 }
 
 /* HERO BANNER */
 .hero-banner {
-  height: 100vh;
+  /* height: 100vh; */
+  padding: 80px 0;
   background: url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6")
     center/cover no-repeat;
       /* background: url("./images/vijay-raja-banner.jpg")
@@ -46,7 +76,7 @@ body {
 .banner-form {
   background: #ffffff;
   padding: 20px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   border-radius: 6px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
@@ -182,18 +212,14 @@ body {
 .property-carousel .owl-nav span {
   font-size: 30px;
   color: #000;
+  /* color: #1ecbe1; */
 }
 /* ============================================================================== */
 .why-choose-us {
-  padding: 80px 20px;
+  /* padding: 80px 20px; */
   background-color: #ffffff;
   text-align: center;
-  font-family: "Arial", sans-serif;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+  /* font-family: "Arial", sans-serif; */
 }
 
 .section-title {
@@ -223,6 +249,13 @@ body {
   min-width: 280px;
   max-width: 350px;
   margin: 0 auto;
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 
+ease-in-out 0.4s;
+}
+.feature-card:hover{
+transform: translateY(-15px);
 }
 
 .feature-card img {
@@ -249,7 +282,7 @@ body {
   padding: 90px 0;
   background: #ffffff;
   text-align: center;
-  font-family: "Segoe UI", sans-serif;
+  /* font-family: "Segoe UI", sans-serif; */
 }
 
 .section-tag {
@@ -261,7 +294,7 @@ body {
 .section-heading {
   font-size: 34px;
   font-weight: 600;
-  margin: 12px 0 50px;
+  /* margin: 12px 0 50px; */
 }
 
 .featured-card {
@@ -270,8 +303,8 @@ body {
 }
 
 .image-box {
-  width: 60%;
   position: relative;
+  height: 100%;
 }
 
 .image-box img {
@@ -300,7 +333,6 @@ body {
 .badge.rent { background: #6f6cff; }
 
 .content-box {
-  width: 40%;
   padding: 45px;
   text-align: left;
 }
@@ -386,10 +418,12 @@ body {
   font-size: 22px !important;
 }
 .featured-slider .owl-nav .owl-prev {
+  position: absolute;
   left: -25px;
 }
 
 .featured-slider .owl-nav .owl-next {
+  position: absolute;
   right: -25px;
 }
 
@@ -457,7 +491,7 @@ body {
 /* ==================================================================================== */
 .site-footer {
   background: #ffffff;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   color: #6b6b6b;
 }
 
@@ -491,6 +525,7 @@ body {
 
 .footer-col ul li a:hover {
   color: #00c2d1;
+  text-decoration: underline;
 }
 
 .brand .logo {
@@ -534,6 +569,7 @@ body {
   padding: 12px 14px;
   outline: none;
   font-size: 14px;
+  border: 1px solid #00c2d1;
 }
 
 .newsletter-form button {
@@ -577,6 +613,158 @@ body {
 /* ============================================================================================= */
 
 /* Responsive */
+/* ============================= */
+/* TABLET & BELOW (≤ 992px) */
+/* ============================= */
+@media (max-width: 992px) {
+
+  /* Navbar */
+  .home-navbar {
+    position: relative;
+  }
+
+  .navbar-nav {
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+  }
+
+  /* Hero Banner */
+  .hero-banner {
+    padding: 120px 0 60px;
+  }
+
+  .hero-banner .col-lg-7 {
+    display: none; /* hide empty image column */
+  }
+
+  .banner-form {
+    margin-top: 20px;
+  }
+
+  /* Featured Section */
+  .featured-card {
+    flex-direction: column;
+  }
+
+  .content-box {
+    padding: 30px;
+  }
+
+  /* Owl arrows inside screen */
+  .property-carousel .owl-nav .owl-prev,
+  .featured-slider .owl-nav .owl-prev {
+    left: 0;
+  }
+
+  .property-carousel .owl-nav .owl-next,
+  .featured-slider .owl-nav .owl-next {
+    right: 0;
+  }
+}
+
+/* ============================= */
+/* MOBILE (≤ 768px) */
+/* ============================= */
+@media (max-width: 768px) {
+
+  /* Headings */
+  .section-title,
+  .section-heading {
+    font-size: 26px;
+  }
+
+  /* Hero Form */
+  .banner-form h3 {
+    font-size: 22px;
+  }
+
+  /* Property Card */
+  .property-img img {
+    height: 200px;
+  }
+
+  .property-body {
+    padding: 15px;
+  }
+
+  /* Why Choose Us */
+  .features {
+    gap: 25px;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  /* Featured Content */
+  .content-box h3 {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  /* Newsletter */
+  .newsletter-content h2 {
+    font-size: 24px;
+  }
+}
+
+/* ============================= */
+/* SMALL MOBILE (≤ 576px) */
+/* ============================= */
+@media (max-width: 576px) {
+
+  /* Header */
+  .brand span {
+    font-size: 16px;
+  }
+
+  /* Hero */
+  .hero-banner {
+    padding: 100px 0 40px;
+  }
+
+  /* Form */
+  .banner-form {
+    padding: 15px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+  }
+
+  /* Featured Info */
+  .property-info {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* Newsletter */
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form button {
+    padding: 14px;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 15px;
+  }
+}
+
 @media (max-width: 600px) {
   .newsletter-content h2 {
     font-size: 22px;
