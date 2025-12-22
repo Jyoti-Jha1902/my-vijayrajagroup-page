@@ -22,12 +22,17 @@
 <body>
 
 <!-- ================= HEADER ================= -->
-<nav class="navbar navbar-expand-lg navbar-dark home-navbar">
+ <header class="site-header" id="site-header">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark home-navbar">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
+    <a class="navbar-brand d-flex align-items-center brand mb-0" href="#">
       <!-- <i class="fa-solid fa-house me-2"></i> -->
-      <img src="./images/favicon-32x32.png" alt="">
-       Vijay Raja Group
+       <div class="logo mb-0">
+       <img src="./images/favicon-32x32.png" alt="">
+       <span>Vijay Raja Group</span>
+      </div>
+      
 
     </a>
 
@@ -37,55 +42,29 @@
 
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Properties</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Featured Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Subscribe Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">FOR SITE VISIT </a></li>
+        <li class="nav-item"><a class="nav-link active" href="#hero-banner">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#property-slider">Properties</a></li>
+        <li class="nav-item"><a class="nav-link" href="#choose-us">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#featured">Featured Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#newsletter">Subscribe Us</a></li>
+        <li class="nav-item">For Site Visit -<a class="nav-link phone" href="tel:9876543210">9876543210</a></li>
       </ul>
     </div>
   </div>
 </nav>
+</header>
+
 
 <!-- ================= BANNER ================= -->
-<section class="hero-banner">
-  <div class="container h-100">
-    <div class="row h-100 align-items-center">
+<section class="hero-banner" id="hero-banner">
+  <div class="container">
+    <div class="row align-items-center">
 
       <!-- LEFT IMAGE SPACE -->
       <div class="col-lg-7"></div>
 
       <!-- RIGHT FORM -->
       <div class="col-lg-5">
-        <!-- <div class="banner-form">
-          <h3>Let Us Call You</h3>
-          <p>To help you find your property</p>
-
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <input type="text" class="form-control" placeholder="Name">
-            </div>
-            <div class="col-md-6 mb-3">
-              <input type="text" class="form-control" placeholder="Phone">
-            </div>
-          </div>
-
-          <input type="email" class="form-control mb-3" placeholder="Email">
-
-          <textarea class="form-control mb-3" rows="4"
-            placeholder="How is your desired property?"></textarea>
-
-          <button class="btn submit-btn w-100 mb-3">Submit</button>
-
-          <div class="form-check small-text">
-            <input class="form-check-input" type="checkbox">
-            <label class="form-check-label">
-              I consent to having this website store my submitted information so they can respond to my inquiry.
-            </label>
-          </div>
-        </div> -->
-
         <div class="banner-form">
              <h3>Let Us Call You</h3>
           <p>To help you find your property</p>
@@ -95,12 +74,15 @@
           method="POST">
 
         <input type="hidden" name="oid" value="00DBh000001jgXB">
-        <input type="hidden" name="retURL" value="http://">
+         <!-- <input type="hidden" name="oid" value="012Bh000000h2OLIAY"> -->
+        
+        <!-- <input type="hidden" name="retURL" value="http://"> -->
+                <input type="hidden" name="retURL" value="https://jyoti-jha1902.github.io/ThankYoupage/">
 
         <div class="row">
             <div class="col-md-6 mb-3">
                 <label for="first_name">First Name</label>
-                <input id="first_name" maxlength="40" name="first_name" class="form-control" type="text">
+                <input id="first_name" maxlength="40" name="first_name" class="form-control" type="text" required>
             </div>
             <div class="col-md-6 mb-3">
                 <label for="last_name">Last Name</label>
@@ -109,10 +91,10 @@
         </div>
 
         <label for="phone">Phone</label>
-        <input id="phone" maxlength="40" name="phone" class="form-control mb-3" type="text">
+        <input id="phone" maxlength="40" name="phone" class="form-control mb-3" type="text" required>
 
         <label for="email">Email</label>
-        <input id="email" maxlength="80" name="email" class="form-control mb-3" type="text">
+        <input id="email" maxlength="80" name="email" class="form-control mb-3" type="text" required>
 
         <label for="description">Description</label>
         <textarea name="description"  class="form-control mb-3"  placeholder="How is your desired property?"></textarea>
@@ -133,7 +115,7 @@
 </section>
 
 <!-- ================= PROPERTY SLIDER ================= -->
-<section class="property-slider-section">
+<section class="property-slider-section" id="property-slider">
   <div class="container">
 
     <h2 class="section-title text-center">Best Properties For Sale</h2>
@@ -220,9 +202,10 @@
 
 <!-- ================= why-choose-us ================= -->
 
-<section class="why-choose-us">
+<section class="why-choose-us" id="choose-us">
   <div class="container">
     <h2 class="section-title">Why Choose Us?</h2>
+    <p>A home isn't just bricks and walls, it's where your life unfolds, where memories are created, and where you feel truly at peace. At Vijay Raja Group, we know that buying a home is one of the most important decisions you will ever make, and we're here to make that journey seamless and rewarding.</p>
     <span class="title-underline"></span>
 
     <div class="features">
@@ -230,9 +213,7 @@
       <div class="feature-card">
         <img src="./images/why-us_1.png" alt="Wider range of properties" />
         <h3>Wider range of properties</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse
-          suscorrem ipsum dolor sit ametcipsum suscorein ipsumg elit.
+        <p>With decades of experience in real estate we create budget-friendly apartment or a spacious luxury residence, our apartments are built with care, quality, and a deep understanding of what modern home buyers need. From smart technology to beautifully crafted interiors, every detail is thoughtfully planned to bring you comfort and convenience.
         </p>
       </div>
 
@@ -240,9 +221,7 @@
       <div class="feature-card">
         <img src="./images/why-us_2.png" alt="Financing made easy" />
         <h3>Financing made easy</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse
-          suscorrem ipsum dolor sit ametcipsum suscorein ipsumg elit.
+        <p> As one of the best builders in Chennai, we also know that a home isn't just about what's inside—it's about the community around you. That's why our projects are designed with green spaces, top-notch amenities, and a welcoming atmosphere, so you don't just live in a house, you become part of a neighborhood that truly feels like home.
         </p>
       </div>
 
@@ -250,9 +229,7 @@
       <div class="feature-card">
         <img src="./images/why-us_3.png" alt="Transparency" />
         <h3>Transparency</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse
-          suscorrem ipsum dolor sit ametcipsum suscorein ipsumg elit.
+        <p>We don't just sell properties, we build trust, relationships, and homes that stand the test of time. With a legacy of quality, innovation, and customer-first values, we make sure your home-buying experience is stress-free and fulfilling. If you're searching for apartment for sale in Chennai that are not just places to live but homes where you'll build your future.
         </p>
       </div>
     </div>
@@ -260,34 +237,35 @@
 </section>
 
 <!-- ================= Featured Project ================= -->
-<section class="featured-section">
+<section class="featured-section" id="featured">
   <div class="container">
 
     <span class="section-tag">FEATURED PROPERTIES</span>
     <h2 class="section-heading">Check Out Our Featured Items</h2>
+        <div class="title-line"></div>
 
     <div class="owl-carousel featured-slider">
 
       <!-- Slide 1 -->
       <div class="item">
         <div class="featured-card">
-
-          <div class="image-box">
+          <div class="row">
+            <div class="col-lg-7 col-md-12">
+               <div class="image-box">
             <img src="./images/featured-1.jpg" alt="">
             <div class="badges">
               <span class="badge featured">FEATURED</span>
               <span class="badge rent">FOR RENT</span>
             </div>
           </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                  <div class="content-box">
+            <h3>Experience coastal bliss with VRX Terrace</h3>
+            <p>Homes That Make You Smile - Vijay Raja Group</p>
+            <span class="location">VRX Terracen, Muttukadu ECR </span>
 
-          <div class="content-box">
-            <h3>House In Foxhall Ave, Kingston</h3>
-            <span class="location">289 Foxhall Ave, Kingston</span>
-
-            <p class="description">
-              Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus
-              faucibus scelerisque eleifend donec. Porta nibh venenatis cras sed.
-            </p>
+            <p class="description">Nestled in the prime location of Chennai, our Sea View Apartments offer more than just a home - they offer a sanctuary. Imagine yourself on your private terrace, where the gentle sea breeze kisses your skin, the mesmerizing view of the ocean stretching out before you, and every moment infused with enchantment.</p>
 
             <div class="property-info">
               <span>3 Br</span>
@@ -302,26 +280,30 @@
               <a href="#" class="view-btn">View Details</a>
             </div>
           </div>
-
+            </div>
+          </div>            
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="item">
         <div class="featured-card">
-          <div class="image-box">
+          <div class="row">
+            <div class="col-lg-7 col-md-12">
+              <div class="image-box">
             <img src="./images/featured-3.jpg" alt="">
             <div class="badges">
               <span class="badge featured">FEATURED</span>
               <span class="badge rent">FOR RENT</span>
             </div>
           </div>
-          <div class="content-box">
-            <h3>Luxury Villa In Miami</h3>
-            <span class="location">Miami, Florida</span>
-            <p class="description">
-              Spacious villa with premium interiors and modern design.
-            </p>
+            </div>
+            <div class="col-lg-5 col-md-12">
+              <div class="content-box">
+            <h3>WHERE INNOVATION MEETS TIMESLESSNESS</h3>
+            <p>Homes That Make You Smile - Vijay Raja Group</p>
+            <span class="location">VRX FETE, Poonamallee</span>
+            <p class="description">Discover the classic elegance of Roman architecture and design at VRX FETE, the premium residential project by Vijay Raja Homes. Every detail of these homes has been carefully crafted to reflect the essence of the Roman lifestyle, offering a touch of timeless sophistication. </p>
             <div class="property-info">
               <span>4 Br</span>
               <span>3 Ba</span>
@@ -333,25 +315,32 @@
               <a href="#" class="view-btn">View Details</a>
             </div>
           </div>
+            </div>
+          </div>
+          
+          
         </div>
       </div>
 
       <!-- Slide 3 -->
       <div class="item">
         <div class="featured-card">
-          <div class="image-box">
+             <div class="row">
+            <div class="col-lg-7 col-md-12">
+               <div class="image-box">
             <img src="./images/featured-2.jpg" alt="">
             <div class="badges">
               <span class="badge featured">FEATURED</span>
               <span class="badge rent">FOR RENT</span>
             </div>
           </div>
-          <div class="content-box">
-            <h3>Modern Apartment In New York</h3>
-            <span class="location">Brooklyn, NY</span>
-            <p class="description">
-              Comfortable apartment located near city attractions.
-            </p>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <div class="content-box">
+            <h3>A LIFESTYLE OF CLASS. A LIFETIME OF SMILES.</h3>
+            <p>Homes That Make You Smile - Vijay Raja Group</p>
+            <span class="location">VRX 360, Thirumazhisai</span>
+            <p class="description">All you have been hoping for all these years is VRX 360. VRX 360 is a wonderful fit for your family and is a well-planned and elegantly designed home that is a tangible representation of your finer tastes. It provides you with an excellent selection of the most cutting-edge amenities,</p>
             <div class="property-info">
               <span>2 Br</span>
               <span>1 Ba</span>
@@ -363,25 +352,32 @@
               <a href="#" class="view-btn">View Details</a>
             </div>
           </div>
+            </div>
+          </div>
+         
+        
         </div>
       </div>
 
       <!-- Slide 4 -->
       <div class="item">
         <div class="featured-card">
-          <div class="image-box">
+             <div class="row">
+            <div class="col-lg-7 col-md-12">
+              <div class="image-box">
             <img src="./images/featured-1.jpg" alt="">
             <div class="badges">
               <span class="badge featured">FEATURED</span>
               <span class="badge rent">FOR RENT</span>
             </div>
           </div>
-          <div class="content-box">
-            <h3>Family Home In Los Angeles</h3>
-            <span class="location">Los Angeles, CA</span>
-            <p class="description">
-              Beautiful family home with spacious rooms and garden.
-            </p>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <div class="content-box">
+            <h3>SMART HOME COMMUNITY IN TAMILNADU IS GOOD TO GO.</h3>
+            <p>Homes That Make You Smile - Vijay Raja Group</p>
+            <span class="location">VRX MAGNA, Thirumazhisai</span>
+            <p class="description">Step into the future of residential living at VRX Magna, the largest smart home community in Tamil Nadu. Inspired by next-generation lifestyles, this thriving neighbourhood in Thirumazhisai offers top-rated education, premier healthcare, and seamless connectivity to all the hotspots in the city. </p>
             <div class="property-info">
               <span>3 Br</span>
               <span>2 Ba</span>
@@ -393,6 +389,10 @@
               <a href="#" class="view-btn">View Details</a>
             </div>
           </div>
+            </div>
+          </div>
+          
+        
         </div>
       </div>
 
@@ -401,7 +401,7 @@
 </section>
 
 <!-- ================= Newsletter ================= -->
-<section class="newsletter-section">
+<section class="newsletter-section" id="newsletter">
   <div class="newsletter-overlay">
     <div class="newsletter-content">
       <h2>
@@ -419,7 +419,8 @@
 
 <!-- ================= Footer ================= -->
 <footer class="site-footer">
-  <div class="footer-top">
+  <div class="container">
+      <div class="footer-top">
     <div class="footer-col brand">
       <div class="logo">
         <img src="./images/favicon-32x32.png">
@@ -435,22 +436,22 @@
     <div class="footer-col">
       <h4>Location</h4>
       <ul>
-        <li><a href="#">Poonamallee</a></li>
-        <li><a href="#">Thiruporur</a></li>
-        <li><a href="#">Thirumazhisai</a></li>
-        <li><a href="#">Muttukadu - ECR</a></li>
-         <li><a href="#">Chennai</a></li>
+        <li><a href="#"target="_self">Poonamallee</a></li>
+        <li><a href="#"target="_self">Thiruporur</a></li>
+        <li><a href="#"target="_self">Thirumazhisai</a></li>
+        <li><a href="#"target="_self">Muttukadu - ECR</a></li>
+         <li><a href="#"target="_self">Chennai</a></li>
       </ul>
     </div>
 
     <div class="footer-col">
       <h4>Quick links</h4>
       <ul>
-        <li><a href="#">Terms of Use</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Contact Support</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">FAQs</a></li>
+        <li><a href="#"target="_self">Terms of Use</a></li>
+        <li><a href="#"target="_self">Privacy Policy</a></li>
+        <li><a href="#"target="_self">Contact Support</a></li>
+        <li><a href="#"target="_self">Careers</a></li>
+        <li><a href="#"target="_self">FAQs</a></li>
       </ul>
     </div>
 
@@ -464,28 +465,25 @@
       </form>
 
       <div class="social-icons">
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="#"target="_self"><i class="fab fa-twitter"></i></a>
+        <a href="#"target="_self"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"target="_self"><i class="fa-brands fa-square-instagram"></i></a>
       </div>
     </div>
   </div>
 
   <div class="footer-bottom">
     <div class="left">
-      <a href="#">Terms of Use</a>
-      <a href="#">Privacy Policy</a>
+      <a href="#"target="_self">Terms of Use</a>
+      <a href="#"target="_self">Privacy Policy</a>
     </div>
     <div class="right">
         <p>&copy; Copyright 2025 Vijayraja. All rights reserved.</p>
     </div>
   </div>
+  </div>
+
 </footer>
-
-
-
-
-
 
 <!-- jQuery (MUST be first) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
