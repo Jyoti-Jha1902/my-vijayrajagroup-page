@@ -358,7 +358,7 @@ transform: translateY(-15px);
   display: flex;
   gap: 25px;
   color: #1ecad3;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 25px;
 }
 
@@ -569,9 +569,12 @@ transform: translateY(-15px);
   padding: 12px 14px;
   outline: none;
   font-size: 14px;
-  border: 1px solid #00c2d1;
 }
 
+.site-footer input[type="email"] {
+border: 1px solid #00c2d1;
+    border-radius: 5px 0 0 5px;
+}
 .newsletter-form button {
   background: #00c2d1;
   border: none;
