@@ -94,16 +94,22 @@
                 </div>
               </div>
 
-              <label for="phone">Phone</label>
-              <input id="phone" maxlength="40" name="phone" class="form-control" type="tel" pattern="[0-9]{10}"
-                required>
-              <div class="invalid-feedback mb-3"> Enter a valid 10-digit phone number.</div>
-              <label for="email">Email</label>
-              <input id="email" maxlength="80" name="email" class="form-control" type="email" required>
-              <div class="invalid-feedback mb-3"> Please enter a valid email.</div>
-              <label for="description">Description</label>
-              <textarea name="description" class="form-control mb-3"
-                placeholder="How is your desired property?"></textarea>
+                <div class="input-row mb-3">
+                <label for="phone">Phone</label>
+                <input id="phone" maxlength="40" name="phone" class="form-control" type="tel" pattern="[0-9]{10}"
+                  required>
+                <div class="invalid-feedback"> Enter a valid 10-digit phone number.</div>
+              </div>
+              <div class="input-row mb-3">
+                <label for="email">Email</label>
+                <input id="email" maxlength="80" name="email" class="form-control" type="email" required>
+                <div class="invalid-feedback"> Please enter a valid email.</div>
+              </div>
+              <div class="input-row">
+                <label for="description">Description</label>
+                <textarea name="description" class="form-control mb-3"
+                  placeholder="How is your desired property?"></textarea>
+              </div>
 
               <input type="submit" name="submit" class="btn submit-btn w-100 mb-3" value="Submit">
               <!-- <div class="form-check small-text">
@@ -532,3 +538,4 @@
 </body>
 
 </html>
+
