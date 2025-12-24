@@ -102,7 +102,7 @@
               </div>
               <div class="input-row mb-3">
                 <label for="email">Email</label>
-                <input id="email" maxlength="80" name="email" class="form-control" type="email" required>
+                <input id="email" maxlength="80" name="email" class="form-control" type="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                 <div class="invalid-feedback"> Please enter a valid email.</div>
               </div>
               <div class="input-row">
@@ -538,4 +538,5 @@
 </body>
 
 </html>
+
 
