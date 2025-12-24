@@ -85,16 +85,16 @@
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="first_name">First Name</label>
-                  <input id="first_name" maxlength="40" name="first_name" class="form-control" type="text" required>
-                  <div class="invalid-feedback">Please enter your name.</div>
+                  <input id="first_name" maxlength="40" name="first_name" class="form-control" type="text">
+                  
                 </div>
                 <div class="col-md-6 mb-3">
                   <label for="last_name">Last Name</label>
-                  <input id="last_name" maxlength="80" name="last_name" class="form-control" type="text">
+                  <input id="last_name" maxlength="80" name="last_name" class="form-control" type="text" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
                 </div>
               </div>
-
-                <div class="input-row mb-3">
+              <div class="input-row mb-3">
                 <label for="phone">Phone</label>
                 <input id="phone" maxlength="40" name="phone" class="form-control" type="tel" pattern="[0-9]{10}"
                   required>
@@ -103,14 +103,15 @@
               <div class="input-row mb-3">
                 <label for="email">Email</label>
                 <input id="email" maxlength="80" name="email" class="form-control" type="email" required>
+                <!-- pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  -->
                 <div class="invalid-feedback"> Please enter a valid email.</div>
               </div>
+              <!-- -->
               <div class="input-row">
                 <label for="description">Description</label>
                 <textarea name="description" class="form-control mb-3"
                   placeholder="How is your desired property?"></textarea>
               </div>
-
               <input type="submit" name="submit" class="btn submit-btn w-100 mb-3" value="Submit">
               <!-- <div class="form-check small-text">
             <input class="form-check-input" type="checkbox" required>
@@ -140,14 +141,14 @@
           <div class="item">
             <div class="property-img">
               <span class="badge-featured">FEATURED</span>
-              <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+              <img src="./images/apartment-1.webp">
             </div>
             <div class="property-body">
               <div class="price-row">
                 <h5>Rs 1,250,000</h5>
-                <span class="sale-tag">Book NOW</span>
+                <span class="sale-tag">BOOK NOW</span>
               </div>
-              <h6>Residential apartments, Vijay Raja Group Apartments </h6>
+              <h6>Vijayaraja Royal Sriram</h6>
               <p>Behind Rajalakshmi Mahindra, Poonamallee, Chennai</p>
             </div>
           </div>
@@ -159,15 +160,15 @@
           <div class="item">
             <div class="property-img">
               <span class="badge-featured">FEATURED</span>
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+              <img src="./images/apartment-2.webp">
             </div>
             <div class="property-body">
               <div class="price-row">
                 <h5>Rs 1,250,000</h5>
                 <span class="sale-tag">BOOK NOW</span>
               </div>
-              <h6>1 & 2 BHK apartments in a gated community apartments</h6>
-              <p>Thiruporur Road, near Thiruporur,OMR/ ECR growth corridor, Chennai</p>
+              <h6>VijayRaja Urban Heights</h6>
+              <p>Thiruporur Road, near Thiruporur, OMR/ ECR growth corridor, Chennai</p>
             </div>
           </div>
 
@@ -178,14 +179,14 @@
           <div class="item">
             <div class="property-img">
               <span class="badge-featured">FEATURED</span>
-              <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914">
+              <img src="./images/apartment-3.webp">
             </div>
             <div class="property-body">
               <div class="price-row">
                 <h5>Rs 1,250,000</h5>
                 <span class="sale-tag">BOOK NOW</span>
               </div>
-              <h6>1 & 2 BHK flats + studios in an integrated township.</h6>
+              <h6>VijayRaja Royal Villas</h6>
               <p>Jamin Korattur, IMA Puduchatram,Thirumazhisai, Chennai</p>
             </div>
           </div>
@@ -196,14 +197,14 @@
         <div class="property-card">
           <div class="property-img">
             <span class="badge-featured">FEATURED</span>
-            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
+            <img src="./images/apartment-4.webp">
           </div>
           <div class="property-body">
             <div class="price-row">
               <h5>Rs 1,250,000</h5>
               <span class="sale-tag">BOOK NOW</span>
             </div>
-            <h6>Studio, 1 BHK, 2 BHK sea-view apartments.</h6>
+            <h6>VijayRaja Green Meadows</h6>
             <p>S.Nos.40/2A, 46/1A2A, Muttukadu-Thiruporur, Chennai</p>
           </div>
         </div>
@@ -302,7 +303,7 @@
                   <div class="divider"></div>
 
                   <div class="price-row">
-                    <div class="price">Rs 5500 <span>/ month</span></div>
+                    <div class="price">Rs 55000 <span>/ month</span></div>
                     <a href="#" class="view-btn">View Details</a>
                   </div>
                 </div>
@@ -317,7 +318,7 @@
             <div class="row">
               <div class="col-lg-7 col-md-12">
                 <div class="image-box">
-                  <img src="./images/featured-3.jpg" alt="">
+                  <img src="./images/featured-2.jpg" alt="">
                   <div class="badges">
                     <span class="badge featured">FEATURED</span>
                     <span class="badge rent">FOR RENT</span>
@@ -340,7 +341,7 @@
                   </div>
                   <div class="divider"></div>
                   <div class="price-row">
-                    <div class="price">Rs 8500 <span>/ month</span></div>
+                    <div class="price">Rs 85000 <span>/ month</span></div>
                     <a href="#" class="view-btn">View Details</a>
                   </div>
                 </div>
@@ -357,7 +358,7 @@
             <div class="row">
               <div class="col-lg-7 col-md-12">
                 <div class="image-box">
-                  <img src="./images/featured-2.jpg" alt="">
+                  <img src="./images/featured-3.jpg" alt="">
                   <div class="badges">
                     <span class="badge featured">FEATURED</span>
                     <span class="badge rent">FOR RENT</span>
@@ -380,7 +381,7 @@
                   </div>
                   <div class="divider"></div>
                   <div class="price-row">
-                    <div class="price">Rs 6200 <span>/ month</span></div>
+                    <div class="price">Rs 62000 <span>/ month</span></div>
                     <a href="#" class="view-btn">View Details</a>
                   </div>
                 </div>
@@ -397,7 +398,7 @@
             <div class="row">
               <div class="col-lg-7 col-md-12">
                 <div class="image-box">
-                  <img src="./images/featured-1.jpg" alt="">
+                  <img src="./images/featured-4.jpg" alt="">
                   <div class="badges">
                     <span class="badge featured">FEATURED</span>
                     <span class="badge rent">FOR RENT</span>
@@ -420,12 +421,13 @@
                   </div>
                   <div class="divider"></div>
                   <div class="price-row">
-                    <div class="price">Rs 7800 <span>/ month</span></div>
+                    <div class="price">Rs 78000 <span>/ month</span></div>
                     <a href="#" class="view-btn">View Details</a>
                   </div>
                 </div>
               </div>
             </div>
+
 
           </div>
         </div>
@@ -537,7 +539,3 @@
 </body>
 
 </html>
-
-
-
-
