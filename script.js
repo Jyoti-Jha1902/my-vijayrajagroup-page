@@ -38,64 +38,41 @@ $(document).ready(function () {
 
   Array.from(forms).forEach(form => {
 
-    /* ================= EMAIL VALIDATION ================= */
-    const emailInput = form.querySelector('input[type="email"]');
+    const firstName = form.querySelector('#first_name');
+    const lastName  = form.querySelector('#last_name');
+    const email     = form.querySelector('#email');
+
+    const nameRegex  = /^[A-Za-z]+(?:\s[A-Za-z]+)*$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    emailInput.addEventListener('input', () => {
-      if (emailRegex.test(emailInput.value)) {
-        emailInput.classList.remove('is-invalid');
-        emailInput.classList.add('is-valid');
+    /* ===== First Name (optional) ===== */
+    firstName.addEventListener('input', () => {
+      firstName.setCustomValidity(''); // optional → never invalid
+      firstName.classList.add('is-valid');
+    });
+
+    /* ===== Last Name (required) ===== */
+    lastName.addEventListener('input', () => {
+      if (nameRegex.test(lastName.value.trim())) {
+        lastName.setCustomValidity('');
       } else {
-        emailInput.classList.remove('is-valid');
-        emailInput.classList.add('is-invalid');
+        lastName.setCustomValidity('Invalid name');
       }
     });
 
-    /* ================= NAME VALIDATION ================= */
-    const firstNameInput = form.querySelector('#first_name'); // optional
-    const lastNameInput = form.querySelector('#last_name');   // required (if you want)
-
-    const nameRegex = /^[A-Za-z]+(?:\s[A-Za-z]+)*$/;
-
-    function validateName(input, isRequired) {
-      const value = input.value.trim();
-
-      // If NOT required and empty → valid
-      if (!isRequired && value === '') {
-        input.classList.remove('is-invalid');
-        input.classList.remove('is-valid');
-        return true;
-      }
-
-      if (nameRegex.test(value)) {
-        input.classList.remove('is-invalid');
-        input.classList.add('is-valid');
-        return true;
+    /* ===== Email ===== */
+    email.addEventListener('input', () => {
+      if (emailRegex.test(email.value.trim())) {
+        email.setCustomValidity('');
       } else {
-        input.classList.remove('is-valid');
-        input.classList.add('is-invalid');
-        return false;
+        email.setCustomValidity('Invalid email');
       }
-    }
+    });
 
-    // LIVE VALIDATION
-    firstNameInput.addEventListener('input', () =>
-      validateName(firstNameInput, false) // NOT required
-    );
-
-    lastNameInput.addEventListener('input', () =>
-      validateName(lastNameInput, true) // REQUIRED
-    );
-
-    /* ================= FORM SUBMIT ================= */
+    /* ===== Submit ===== */
     form.addEventListener('submit', event => {
 
-      const isEmailValid = emailRegex.test(emailInput.value);
-      const isFirstNameValid = validateName(firstNameInput, false);
-      const isLastNameValid = validateName(lastNameInput, true);
-
-      if (!form.checkValidity() || !isEmailValid || !isFirstNameValid || !isLastNameValid) {
+      if (!form.checkValidity()) {
         event.preventDefault();
         event.stopPropagation();
       }
@@ -105,6 +82,8 @@ $(document).ready(function () {
 
   });
 })();
+
+
 
 
 
