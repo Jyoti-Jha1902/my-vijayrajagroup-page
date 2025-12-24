@@ -54,8 +54,10 @@ box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
 .hero-banner {
   /* height: 100vh; */
   padding: 80px 0;
-  background: url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6")
-    center/cover no-repeat;
+  background: url("./images/bg-3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
       /* background: url("./images/vijay-raja-banner.jpg")
     center/cover no-repeat; */
 }
@@ -304,7 +306,7 @@ transform: translateY(-15px);
 
 .image-box {
   position: relative;
-  height: 100%;
+  height: 540px;
 }
 
 .image-box img {
@@ -333,7 +335,7 @@ transform: translateY(-15px);
 .badge.rent { background: #6f6cff; }
 
 .content-box {
-  padding: 45px;
+  padding: 45px 45px 0 45px;
   text-align: left;
 }
 
