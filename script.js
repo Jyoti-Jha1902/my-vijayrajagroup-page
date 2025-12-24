@@ -37,27 +37,34 @@ $(document).ready(function () {
   const forms = document.querySelectorAll('.needs-validation');
 
   Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
 
-      // EMAIL STRICT VALIDATION
-      const emailInput = form.querySelector('input[type="email"]');
-      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const emailInput = form.querySelector('input[type="email"]');
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-      if (!emailRegex.test(emailInput.value)) {
-        emailInput.setCustomValidity('Invalid');
-      } else {
+    // REAL-TIME EMAIL VALIDATION
+    emailInput.addEventListener('input', () => {
+      if (emailRegex.test(emailInput.value)) {
         emailInput.setCustomValidity('');
+        emailInput.classList.remove('is-invalid');
+        emailInput.classList.add('is-valid');
+      } else {
+        emailInput.setCustomValidity('Invalid');
+        emailInput.classList.remove('is-valid');
+        emailInput.classList.add('is-invalid');
       }
+    });
 
-      // FINAL CHECK
+    // FORM SUBMIT
+    form.addEventListener('submit', event => {
       if (!form.checkValidity()) {
         event.preventDefault();
         event.stopPropagation();
       }
-
       form.classList.add('was-validated');
-    }, false);
+    });
+
   });
 })();
+
 
 
