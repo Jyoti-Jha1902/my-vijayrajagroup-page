@@ -38,12 +38,26 @@ $(document).ready(function () {
 
   Array.from(forms).forEach(form => {
     form.addEventListener('submit', event => {
+
+      // EMAIL STRICT VALIDATION
+      const emailInput = form.querySelector('input[type="email"]');
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+      if (!emailRegex.test(emailInput.value)) {
+        emailInput.setCustomValidity('Invalid');
+      } else {
+        emailInput.setCustomValidity('');
+      }
+
+      // FINAL CHECK
       if (!form.checkValidity()) {
         event.preventDefault();
         event.stopPropagation();
       }
+
       form.classList.add('was-validated');
     }, false);
   });
 })();
+
 
