@@ -46,10 +46,14 @@ $(document).ready(function () {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     /* ===== First Name (optional) ===== */
+     /* ===== First Name (optional) ===== */
     firstName.addEventListener('input', () => {
-      firstName.setCustomValidity(''); // optional → never invalid
-      firstName.classList.add('is-valid');
-    });
+      if (nameRegex.test(firstName.value.trim())) {
+        firstName.setCustomValidity('');
+      } else {
+        firstName.setCustomValidity('Invalid name');
+      }
+    });;
 
     /* ===== Last Name (required) ===== */
     lastName.addEventListener('input', () => {
@@ -82,6 +86,7 @@ $(document).ready(function () {
 
   });
 })();
+
 
 
 
