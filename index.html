@@ -85,13 +85,13 @@
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="first_name">First Name</label>
-                  <input id="first_name" maxlength="40" name="first_name" class="form-control" type="text">
-                  
+                  <input id="first_name" maxlength="40" name="first_name" class="form-control" type="text" required>
+                  <div class="invalid-feedback">Please enter your first name.</div>
                 </div>
                 <div class="col-md-6 mb-3">
                   <label for="last_name">Last Name</label>
                   <input id="last_name" maxlength="80" name="last_name" class="form-control" type="text" required>
-                  <div class="invalid-feedback">Please enter your name.</div>
+                  <div class="invalid-feedback">Please enter your last name.</div>
                 </div>
               </div>
               <div class="input-row mb-3">
@@ -539,4 +539,5 @@
 </body>
 
 </html>
+
 
