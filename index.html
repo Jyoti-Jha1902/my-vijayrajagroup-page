@@ -72,15 +72,34 @@
             <p>To help you find your property</p>
 
             <!-- SALESFORCE WEB-TO-LEAD FORM -->
+            <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+            <!-- modal html -->
+            <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-body text-center">
+                    <h5 class="mb-2">Thank You !!</h5>
+                    <p>Thank you! Your request has been submitted.
+                      Our team will contact you if the details are accepted.</p>
+                    <button class="ok-button" onclick="reloadPage()">OK</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- modal html ends  -->
+
+
             <form class="needs-validation"
               action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DBh000001jgXB"
-              method="POST" novalidate>
-
+              method="POST" target="hidden_iframe" novalidate 
+              onsubmit="return handleSubmit(event);" >
+              <!-- onsubmit="alert('Thank you! We will contact you soon.');"  -->
               <input type="hidden" name="oid" value="00DBh000001jgXB">
               <!-- <input type="hidden" name="oid" value="012Bh000000h2OLIAY"> -->
 
               <!-- <input type="hidden" name="retURL" value="http://"> -->
-              <input type="hidden" name="retURL" value="https://jyoti-jha1902.github.io/ThankYoupage/">
+              <!-- <input type="hidden" name="retURL" value="https://jyoti-jha1902.github.io/ThankYoupage/"> -->
 
               <div class="row">
                 <div class="col-md-6 mb-3">
@@ -107,6 +126,7 @@
                 <div class="invalid-feedback"> Please enter a valid email.</div>
               </div>
               <!-- -->
+              <input type="hidden" name="company" value="Vijay Raja Group">
               <div class="input-row">
                 <label for="description">Description</label>
                 <textarea name="description" class="form-control mb-3"
@@ -145,7 +165,7 @@
             </div>
             <div class="property-body">
               <div class="price-row">
-                <h5>₹ 1,250,000</h5>
+                <h5>Rs 1,250,000</h5>
                 <span class="sale-tag">BOOK NOW</span>
               </div>
               <h6>Vijayaraja Royal Sriram</h6>
@@ -164,7 +184,7 @@
             </div>
             <div class="property-body">
               <div class="price-row">
-                <h5>₹ 1,250,000</h5>
+                <h5>Rs 1,250,000</h5>
                 <span class="sale-tag">BOOK NOW</span>
               </div>
               <h6>VijayRaja Urban Heights</h6>
@@ -183,7 +203,7 @@
             </div>
             <div class="property-body">
               <div class="price-row">
-                <h5>₹ 1,250,000</h5>
+                <h5>Rs 1,250,000</h5>
                 <span class="sale-tag">BOOK NOW</span>
               </div>
               <h6>VijayRaja Royal Villas</h6>
@@ -201,7 +221,7 @@
           </div>
           <div class="property-body">
             <div class="price-row">
-              <h5>₹ 1,250,000</h5>
+              <h5>Rs 1,250,000</h5>
               <span class="sale-tag">BOOK NOW</span>
             </div>
             <h6>VijayRaja Green Meadows</h6>
@@ -303,7 +323,7 @@
                   <div class="divider"></div>
 
                   <div class="price-row">
-                    <div class="price">₹ 55000 <span>/ month</span></div>
+                    <div class="price">Rs 55000 <span>/ month</span></div>
                     <a href="#" class="view-btn">View Details</a>
                   </div>
                 </div>
@@ -341,7 +361,7 @@
                   </div>
                   <div class="divider"></div>
                   <div class="price-row">
-                    <div class="price">₹ 85000 <span>/ month</span></div>
+                    <div class="price">Rs 85000 <span>/ month</span></div>
                     <a href="#" class="view-btn">View Details</a>
                   </div>
                 </div>
@@ -381,7 +401,7 @@
                   </div>
                   <div class="divider"></div>
                   <div class="price-row">
-                    <div class="price">₹ 62000 <span>/ month</span></div>
+                    <div class="price">Rs 62000 <span>/ month</span></div>
                     <a href="#" class="view-btn">View Details</a>
                   </div>
                 </div>
@@ -421,7 +441,7 @@
                   </div>
                   <div class="divider"></div>
                   <div class="price-row">
-                    <div class="price">₹ 78000 <span>/ month</span></div>
+                    <div class="price">Rs 78000 <span>/ month</span></div>
                     <a href="#" class="view-btn">View Details</a>
                   </div>
                 </div>
@@ -539,5 +559,3 @@
 </body>
 
 </html>
-
-
