@@ -41,7 +41,7 @@ box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
 /* .home-navbar .phone {
   margin: 0;
   padding-left: 0 !important;
-} */
+} */ 
 .home-navbar .nav-link:hover {
   color: #1ecbe1;
   text-decoration: underline;
@@ -71,7 +71,7 @@ box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
 
 .hero-banner .container {
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
 }
 
 /* FORM */
@@ -613,8 +613,47 @@ border: 1px solid #00c2d1;
 .footer-bottom a:hover {
   color: #00c2d1;
 }
+/* ================================== */
+/* Ensure modal is always on top */
+/* Modal above everything */
 
+/* Blue overlay */
+.modal-backdrop.show {
+  background-color: rgb(18,199,222,0.4) !important;
+  z-index: 3;
+}
 
+/* Ensure modal is clickable */
+.modal,
+.modal * {
+  pointer-events: auto !important;
+}
+.modal-backdrop {
+    --bs-backdrop-zindex: none !important; 
+    --bs-backdrop-bg: #000;
+    --bs-backdrop-opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--bs-backdrop-zindex);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bs-backdrop-bg);
+}
+  .ok-button {
+      padding: 10px 20px;
+      background: #1ecbe1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+.modal p {
+    font-size: 14px;
+    color: #000;
+    margin: 15px 0;
+    text-align: center;
+}
 /* ============================================================================================= */
 
 /* Responsive */
@@ -637,10 +676,6 @@ border: 1px solid #00c2d1;
   /* Hero Banner */
   .hero-banner {
     padding: 120px 0 60px;
-  }
-
-  .hero-banner .col-lg-7 {
-    display: none; /* hide empty image column */
   }
 
   .banner-form {
